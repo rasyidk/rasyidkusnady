@@ -9,17 +9,32 @@ export default function Header() {
     setMenuOpen(!menuOpen)
   }
 
+  const handleScroll = (event) => {
+    event.preventDefault()
+    const targetId = event.currentTarget.getAttribute('href').substring(1)
+    const targetElement = document.getElementById(targetId)
+
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth',
+      })
+    }
+  }
+
   return (
     <header className="min-h-[64px] border-b border-line flex py-2 sticky z-10 w-full px-4 md:px-0 top-0 bg-primary ">
       <div className="container flex items-center justify-between mx-auto">
-        <Image
-          src="/image/logo.svg"
-          alt="Logo"
-          width={100}
-          height={20}
-          priority
-          className="w-auto h-8 lg:h-auto"
-        />
+        <a href="#home">
+          <Image
+            src="/image/logo.svg"
+            alt="Logo"
+            width={100}
+            height={20}
+            priority
+            className="w-auto h-8 lg:h-auto"
+          />
+        </a>
 
         <button
           className="md:hidden text-secondary focus:outline-none"
@@ -66,16 +81,18 @@ export default function Header() {
           <ul className="flex flex-col md:flex-row md:space-x-4 text-lg ">
             <li>
               <a
-                href="#"
+                href="#works"
                 className=" text-secondary hover:text-white px-4 py-2 justify-end flex border-line border-b md:border-none md-border"
+                onClick={handleScroll}
               >
                 works
               </a>
             </li>
             <li>
               <a
-                href="#"
+                href="#contact"
                 className="flex text-secondary hover:text-white px-4 py-2 justify-end "
+                onClick={handleScroll}
               >
                 contact
               </a>

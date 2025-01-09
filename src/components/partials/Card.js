@@ -160,7 +160,7 @@ const CardComponent = () => {
     <section>
       <div
         id="cards-wrapper"
-        className="Cards  flex overflow-hidden flex-col flex-nowrap justify-start content-center items-center w-full pt-[100px] pb-[30px] relative px-4"
+        className="Cards  flex overflow-hidden flex-col flex-nowrap justify-start content-center items-center w-full pt-[50px]  lg:pt-[100px] pb-[30px] relative px-4"
       >
         {cardData.map((card, index) => (
           <div

@@ -9,7 +9,7 @@ const socialLinks = [
 
 export default function Contact() {
   return (
-    <section className="border-t border-line w-full p-[5%]">
+    <section className="border-t border-line w-full p-[5%]" id="contact">
       <div className="container mx-auto">
         <h2 className="text-4xl lg:text-[5vw] font-bold">GET IN TOUCH</h2>
         <h3 className="text-2xl lg:text-4xl underline py-[8%] lg:py-[5%]">

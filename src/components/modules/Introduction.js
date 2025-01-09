@@ -15,7 +15,10 @@ export default function Introduction() {
   ]
 
   return (
-    <section className="container flex items-center mx-auto h-screen px-[5%] lg:px-0">
+    <section
+      className="container flex items-center mx-auto h-screen px-[5%] lg:px-0"
+      id="home"
+    >
       <div className="flex flex-col w-full">
         <Image
           src="/image/rasyid-face.png"
